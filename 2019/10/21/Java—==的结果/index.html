@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://dansone.github.io">
-  <title>Java中String、Integer、int相互间的转换 | Dansone</title>
+  <title>Java—==的结果 | Dansone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Integer转换成int的方法123Integer i = new Integer(10); int k = i.intValue();Integer.intValue();">
-<meta name="keywords" content="Java,转换">
+  <meta name="description" content="下面总结一下关于“==”比较两个变量是否相等的问题。">
+<meta name="keywords" content="Java,==">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中String、Integer、int相互间的转换">
-<meta property="og:url" content="https://dansone.github.io/2019/08/30/Java中String、Integer、int相互间的转换/index.html">
+<meta property="og:title" content="Java—==的结果">
+<meta property="og:url" content="https://dansone.github.io/2019/10/21/Java—==的结果/index.html">
 <meta property="og:site_name" content="Dansone">
-<meta property="og:description" content="Integer转换成int的方法123Integer i = new Integer(10); int k = i.intValue();Integer.intValue();">
+<meta property="og:description" content="下面总结一下关于“==”比较两个变量是否相等的问题。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-16T16:21:19.467Z">
+<meta property="og:updated_time" content="2019-10-21T15:38:49.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中String、Integer、int相互间的转换">
-<meta name="twitter:description" content="Integer转换成int的方法123Integer i = new Integer(10); int k = i.intValue();Integer.intValue();">
+<meta name="twitter:title" content="Java—==的结果">
+<meta name="twitter:description" content="下面总结一下关于“==”比较两个变量是否相等的问题。">
   
     <link rel="alternative" href="/atom.xml" title="Dansone" type="application/atom+xml">
   
@@ -129,14 +129,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java中String、Integer、int相互间的转换" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java—==的结果" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java中String、Integer、int相互间的转换
+      Java—==的结果
     </h1>
   
 
@@ -147,34 +147,36 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/08/30/Java中String、Integer、int相互间的转换/" class="archive-article-date">
-  	<time datetime="2019-08-30T15:53:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
+<a href="/2019/10/21/Java—==的结果/" class="archive-article-date">
+  	<time datetime="2019-10-21T15:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Integer转换成int的方法"><a href="#Integer转换成int的方法" class="headerlink" title="Integer转换成int的方法"></a>Integer转换成int的方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer i = new Integer(10); </span><br><span class="line">int k = i.intValue();</span><br><span class="line">Integer.intValue();</span><br></pre></td></tr></table></figure>
+        <p>下面总结一下关于“==”比较两个变量是否相等的问题。<a id="more"></a></p>
+<h2 id="Integer"><a href="#Integer" class="headerlink" title="Integer"></a>Integer</h2><p>example1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer a = 100;</span><br><span class="line">Integer b = 100;</span><br><span class="line">System.out.println(a == b);</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
-<h2 id="int转换成Integer"><a href="#int转换成Integer" class="headerlink" title="int转换成Integer"></a>int转换成Integer</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i = 10;</span><br><span class="line">Integer it = new Integer(i);</span><br></pre></td></tr></table></figure>
+<p><code>true</code><br>example2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer a = new Integer(100);</span><br><span class="line">Integer b = new Integer(100);</span><br><span class="line">System.out.println(a == b);</span><br><span class="line">//此时的a,b指向了不同的对象</span><br></pre></td></tr></table></figure>
 
-<h2 id="String转换成int的方法"><a href="#String转换成int的方法" class="headerlink" title="String转换成int的方法"></a>String转换成int的方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String str = &quot;10&quot;;  </span><br><span class="line">Integer it = new Interger(str);  </span><br><span class="line">int i = it.intValue();  </span><br><span class="line">int i = Integer.intValue(string);</span><br></pre></td></tr></table></figure>
+<p><code>false</code><br>example3:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Integer a = 128;</span><br><span class="line">Integer b = 128;</span><br><span class="line">System.out.println(a == b);</span><br><span class="line">/*对于-128-127之间的常用数，Java会对其进</span><br><span class="line">行缓存，超过这个范围则会新建一个对象，优化了代码*/</span><br></pre></td></tr></table></figure>
 
-<h2 id="int转换成String"><a href="#int转换成String" class="headerlink" title="int转换成String"></a>int转换成String</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int i = 10;</span><br><span class="line">String s = String.valueOf(i);//(1)</span><br><span class="line">String s = Ingeger.toString(i);//(2)</span><br><span class="line">String s = &quot;&quot; + i;//(3)</span><br></pre></td></tr></table></figure>
+<p><code>false</code></p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>example1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s1 = &quot;100&quot;;</span><br><span class="line">String s2 = &quot;1&quot; + new String(&quot;00&quot;);</span><br><span class="line">System.out.println(s1 == s2);</span><br></pre></td></tr></table></figure>
 
+<p><code>false</code><br>example2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s1 = new String(&quot;100&quot;);</span><br><span class="line">String s2 = new String(&quot;100&quot;);</span><br><span class="line">System.out.println(s1 == s2);</span><br><span class="line">//此时的s1,s2指向了不同的对象</span><br></pre></td></tr></table></figure>
 
-<h2 id="String转换成Integer"><a href="#String转换成Integer" class="headerlink" title="String转换成Integer"></a>String转换成Integer</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = &quot;10&quot;;</span><br><span class="line">Integer it = Integer.valueOf(str);</span><br></pre></td></tr></table></figure>
+<p><code>false</code><br>example3:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String s1 = &quot;100&quot;;</span><br><span class="line">String s2 = &quot;100&quot;;</span><br><span class="line">System.out.println(s1 == s2);</span><br><span class="line">/*Java中相同字符串在内存中只有一份，</span><br><span class="line">所以s1,s2指向同一对象，但建议用equals比</span><br><span class="line">较字符串内容是否相等，避免出现example2情况*/</span><br></pre></td></tr></table></figure>
 
+<p><code>true</code></p>
 
-
-<h2 id="Integer转换成String"><a href="#Integer转换成String" class="headerlink" title="Integer转换成String"></a>Integer转换成String</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Integer it = new Integer(10);</span><br><span class="line">String str = it.toString();</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="String转换成BigDecimal"><a href="#String转换成BigDecimal" class="headerlink" title="String转换成BigDecimal"></a>String转换成BigDecimal</h2><p><code>BigDecimal bd = new BigDecimal(str);</code></p>
-<h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();</span><br><span class="line">int year = calendar.get(Calendar.YEAR);</span><br><span class="line">int month = calendar.get(Calendar.MONTH)+1;</span><br><span class="line">int day = calendar.get(Calendar.DATE);</span><br><span class="line">//获取今天的日期字符串</span><br><span class="line">String today = java.text.DateFormat.getDateInstance().format(new java.util.Date());</span><br><span class="line">//获取今天的日期</span><br><span class="line">new java.sql.Date(System.currentTimeMillis());</span><br></pre></td></tr></table></figure>
       
 
       
@@ -191,7 +193,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转换</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">==</a>
         		</li>
       		
 		</ul>
@@ -210,18 +212,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/03/Markdown语法总结/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/21/Java—字符串设置特定编码/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Markdown语法总结
+          Java—字符串设置特定编码
         
       </div>
     </a>
   
   
-    <a href="/2019/08/27/hexo个人博客的搭建/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo个人博客的搭建</div>
+    <a href="/2019/10/13/使用project制定项目计划/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用project制定项目计划</div>
       <i class="icon-circle-right"></i>
     </a>
   
